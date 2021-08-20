@@ -230,6 +230,8 @@ input{
 
 	font-family: comic sans ms, sans-serif;
 
+	cursor: pointer;
+
 }
 
 form{
@@ -436,4 +438,49 @@ iframe{
 
 	height: 25px;
 
+}
+/* Modal design */
+.modal-bg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s;
+}
+.bg-active{
+	visibility: visible;
+	opacity: 1;
+}
+.modal{
+	position:relative; /* this use for .modal-close to be able to use as absolute and place top right*/
+	font-style: sans-serif;
+    background-color: white;
+    width: 30%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.modal button{
+	padding: 10px 30px;
+	background-color: #2980b9;
+	color:#fff;
+	border:none;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	cursor: pointer;
+}
+.modal-close{
+	position: absolute;
+	top:10px;
+	right: 10px;					
+	font-weight: bold;
+	cursor: pointer;
 }
